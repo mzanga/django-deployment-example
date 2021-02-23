@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html" %}
+{% load my_extras %}
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block content %}
+      <div class="jumbotron">
+        <h1>{{ insert_1 | myupper:1}}</h1>
+        <p></p>
+        <h2>{{ insert_2 | title}}</h2>
+        <p></p>
+        <a href="{% url 'first_app:user' %}">Go to User List</a>
+        <p></p>
+        <a href="{% url 'first_app:form' %}">Go to Signin</a>
+      </div>
+    {% endblock %}
+  </body>
+</html>

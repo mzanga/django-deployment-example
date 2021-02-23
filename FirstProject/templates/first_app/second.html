@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>second page</title>
+  </head>
+  <body>
+    <h1>{{ insert_from_second }}</h1>
+    <img src="{% static  'images/nb.jpeg' %}" alt="uh, oh! The image cannot be found!">
+    <a href="{% url 'first_app:user' %}">Link to user list</a>
+
+  </body>
+</html>
